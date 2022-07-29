@@ -1,0 +1,156 @@
+:root{
+  --blanco:#ffffff;
+  --oscuro: #212121;
+  --primario: #FFC107;
+  --secundario: #0097A7;
+  --gris:#757575;
+  --grisclaro: #DFE9F3;
+}
+
+/* esto son generales */
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+  box-sizing: inherit; /* hack para box model**/
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'krup';
+}
+a {
+  text-decoration: none;
+}
+
+.logopoke {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pokedex-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+body {
+  font-size:  18px;
+  font-family: 'krub';
+  background-image: linear-gradient(to top, var(--grisclaro) 30%, var(--blanco) 100%); /* Asi se usa el degradado  **/
+}
+
+
+/*Cartas de los pokemon*/
+.pokedex__pokemon-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10%;
+}
+
+.pokemon{
+background-color: #eee;
+border-radius: 20px;
+box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+margin: 10px;
+padding: 20px;
+text-align: center;
+  width: 200px;
+}
+
+.pokeimg {
+background-color: rgba(255, 255, 255, 0.6);
+border-radius: 50%;
+width: 120px;
+height: 120px;
+text-align: center;
+  margin: auto;
+}
+
+.pokemon .img-container img {
+margin-top: 20px;
+max-width: 90%;
+}
+
+.pokemon .info {
+margin-top: 20px;
+}
+
+.pokemon .number {
+background-color: rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+font-size: 0.8em;
+padding: 5px 10px;
+}
+
+.pokemonname {
+margin: 15px 0 7px;
+letter-spacing: 1px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.753);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 55px;
+}
+
+
+#pokedex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+  padding-inline-start: 0;
+}
+
+.pokecard {
+  list-style: none;
+  padding: 40px;
+  background-color: azure;
+  color: #222;
+  text-align: center;
+  border-radius: 1.5rem;
+  box-shadow: var(--grisclaro);
+  
+}
+
+@keyframes bounce {
+  20% {
+      transform: translateY(-6px);
+  }
+  40% {
+      transform: translateY(0px);
+  }
+
+  80% {
+      transform: translateY(-2px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.footer{
+  text-align: center;
+}

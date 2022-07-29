@@ -1,0 +1,340 @@
+:root{
+    --blanco:#ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris:#757575;
+    --grisclaro: #DFE9F3;
+}
+
+/* esto son generales */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit; /* hack para box model**/
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'krup';
+}
+a {
+    text-decoration: none;
+}
+:root{
+    --blanco:#ffffff;
+    --oscuro: #525558;
+    --primario: #F4D03F;
+    --secundario: #16141b;
+    --primclaro:#FCF3CF;
+    --grisclaro: #DFE9F3;
+    --obscfuerte:#17202A;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    flex-wrap: inherit;
+}
+
+
+body {
+    font-size:  18px;
+    font-family: 'krub';
+    background-color: #525558;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-image: none;
+}
+
+.logopoke{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: 400px;
+}
+
+.sombra {
+	max-width: 180rem;
+    margin-left: 50px;
+    margin-right: 50px;
+	-webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.4);
+	-moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.4);
+	box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.4);
+}
+
+.nav-bg {
+    background-color: none;
+	margin: 0;
+	padding: 0;
+    display: flex;
+    flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	height: auto;
+}
+@media (min-width: 168px) {
+    .nav-bg{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+.nav-bg:hover {
+    background-color: var(--secundario);
+    color: var(--oscuro)
+}
+
+
+
+/* barra */
+.bopoke {
+    background-image: url(img/blanco2.png);
+    background-repeat: no-repeat;
+    background-size: 750px ;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.bopoke{
+	background-color: var(--secundario);
+    max-height: max(150rem, 100%);
+    max-width: 100%;
+    padding: 0;
+    justify-items: center;
+} 
+
+
+.busca {
+    width: 80%;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.header__logo{
+    margin: 3rem 0;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+body {
+    font-size:  18px;
+    font-family: 'krub';
+    background-image: linear-gradient(to top, var(--grisclaro) 30%, var(--blanco) 100%); /* Asi se usa el degradado  **/
+}
+
+
+.pokedex__header-search{
+    margin: auto;
+}
+
+.pokedex__header-search form{
+    border-color: blue;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.pokedex__header-search input{
+    height: 30px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.pokedex__header-search form button{
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.pokedex__header-aline{
+    display: flex;  
+    width: 150px;
+}
+
+.arrow-left{
+    width: 0;
+    height: 0;
+    border-top: 15px solid rgba(255, 0, 0, 0);
+    border-left: 15px solid rgba(49, 173, 18, 0);
+    border-bottom: 15px solid rgba(255, 251, 0, 0);
+    border-right: 15px solid var(--primario);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order{
+    margin: auto;
+    padding: 5px;
+    color: #fff;
+}
+
+.arrow-right{
+    width: 0;
+    height: 0;
+    border-top: 15px solid rgba(255, 0, 0, 0);
+    border-left: 15px solid var(--primario);;
+    border-bottom: 15px solid rgba(255, 251, 0, 0);
+    border-right: 15px solid rgba(255, 0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*Cartas de los pokemon*/
+.pokedex__pokemon-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10%;
+}
+
+.pokemon{
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+    width: 200px;
+}
+
+.pokemon .img-container {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+    margin: auto;
+}
+
+.pokemon .img-container img {
+	margin-top: 20px;
+	max-width: 90%;
+}
+
+.pokemon .info {
+	margin-top: 20px;
+}
+
+.pokemon .number {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	font-size: 0.8em;
+	padding: 5px 10px;
+}
+
+.pokemon .name {
+	margin: 15px 0 7px;
+	letter-spacing: 1px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.753);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container {
+    padding: 40px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 55px;
+}
+
+
+#pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding-inline-start: 0;
+}
+
+.card {
+    list-style: none;
+    padding: 40px;
+    background-color: azure;
+    color: #222;
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: var(--grisclaro);
+    
+}
+
+.card:hover {
+    background-color: var(--fuertefondo);
+    color: var(--blanco);
+    text-shadow:0 .5px .5px var(--blanco);
+}
+
+.card-title {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-size: 32px;
+    font-weight: lighter;
+}
+.card-subtitle {
+    margin-top: 5px;
+    color: var(--secundario);
+    font-weight: bold;
+}
+
+.card-image {
+    height: 100px;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.footer{
+    text-align: center;
+}
